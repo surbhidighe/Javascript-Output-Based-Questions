@@ -263,3 +263,52 @@ console.log([11, 2, 31] + [4, 5, 6]);
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**16. What will be the output**
+```js
+console.log({} == {}); 
+console.log({} === {});
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : false, false</li>
+	<li><b>Reason</b> : When you compare objects using == or ===, it checks if they refer to the exact same object. So even if they are looking same, they are pointing to different memory locations.</li>
+</ul>
+</details>
+	
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**17. What will be the output**
+```js
+let x = 5;
+let y = x++;
+console.log(y);
+console.log(x)
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 5, 6</li>
+	<li><b>Reason</b> : The post-increment operator increments and returns the value before incrementing.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**18. What will be the output**
+```js
+let x = 5;
+let y = ++x;
+console.log(y);
+console.log(x)
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 6, 6</li>
+	<li><b>Reason</b> : The pre-increment operator increments and returns the value after incrementing.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
