@@ -312,3 +312,49 @@ console.log(x)
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**19. What will be the output**
+```js
+console.log('apple'.split(''));
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : [ 'a', 'p', 'p', 'l', 'e' ]</li>
+	<li><b>Reason</b> : split method is used to split a string into an array of substrings based on a specified separator </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**20. What will be the output**
+```js
+const arr = [2,3,5,2,8,10,5];
+console.log(arr.indexOf(5))
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 2</li>
+	<li><b>Reason</b> : indexOf method returns the index of the first occurrence of the specified element in the array. </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**21. What will be the output**
+```js
+const array = [8, 18, 28, 38];
+const result = array.map(element => element + 2)
+               .filter((element) => element > 25);
+console.log(result);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : [ 30, 40 ]</li>
+	<li><b>Reason</b> : The code increments each element in the array by 2 using map and filters out elements greater than 25 using filter,</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
