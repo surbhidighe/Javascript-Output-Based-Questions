@@ -320,7 +320,7 @@ console.log('apple'.split(''));
 	<summary><b>View Answer</b></summary>
 <ul>	
 	<li><b>Output</b> : [ 'a', 'p', 'p', 'l', 'e' ]</li>
-	<li><b>Reason</b> : split method is used to split a string into an array of substrings based on a specified separator </li>
+	<li><b>Reason</b> : split method is used to split a string into an array of substrings based on a specified separator. </li>
 </ul>
 </details>
 
@@ -352,7 +352,42 @@ console.log(result);
 	<summary><b>View Answer</b></summary>
 <ul>	
 	<li><b>Output</b> : [ 30, 40 ]</li>
-	<li><b>Reason</b> : The code increments each element in the array by 2 using map and filters out elements greater than 25 using filter,</li>
+	<li><b>Reason</b> : The code increments each element in the array by 2 using map and filters out elements greater than 25 using filter.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**22. What will be the output**
+```js
+function checkValue(value){
+    var result = Array.isArray(value);
+    console.log(result);
+}
+checkValue([1,2,3]);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : true</li>
+	<li><b>Reason</b> : Array.isArray() method is used to check if the provided value is an array.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**23. What will be the output**
+```js
+function sum(a=5, b=7){
+    return a+b;
+}
+console.log(sum(undefined, 20));
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 25</li>
+	<li><b>Reason</b> : Here, undefined is passed as the value for parameter a, and 20 is passed for parameter b. When any parameter is undefined, the default value is used. </li>
 </ul>
 </details>
 
