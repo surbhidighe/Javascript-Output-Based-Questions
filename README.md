@@ -393,3 +393,67 @@ console.log(sum(undefined, 20));
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**24. What will be the output**
+```js
+console.log(10 + "5");
+console.log("5" + 10);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 105, 510</li>
+	<li><b>Reason</b> : Since one operand is a string, the + operator performs string concatenation. </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**25. What will be the output**
+```js
+console.log(10 - "5");
+console.log("5" - 10);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 5, -5</li>
+	<li><b>Reason</b> : In JavaScript, when the subtraction operator - is used, the operands are converted to numbers before performing the subtraction </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**26. What will be the output**
+```js
+console.log(printName());
+function printName(){
+    return "Hi my name is Bob"
+}
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : Hi my name is Bob</li>
+	<li><b>Reason</b> : Regular functions are hoisted to the top. And you can access and call them even before they are declared. </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+
+**27. What will be the output**
+```js
+console.log(printName());
+const printName = () => {
+    return "Hi my name is Bob"
+}
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : ReferenceError: Cannot access 'printName' before initialization</li>
+	<li><b>Reason</b> : Arrow functions cannot be accessed before they are initialised. </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
