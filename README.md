@@ -457,3 +457,38 @@ const printName = () => {
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**1. What will be the output (shallow copy of an object)**
+```js
+const userDetails = {
+  firstName: "Surbhi",
+  lastName: "Dighe",
+  age: 20,
+  address: {
+    city: "Hyderabad",
+    country: "India",
+  },
+};
+
+let cloneUserDetails = { ...userDetails };
+
+//Updating original object
+userDetails.age = 22;
+userDetails.address.city = "Banglore";
+
+console.log(cloneUserDetails.age); // what will be the output
+console.log(cloneUserDetails.address.city); // what will be the output
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 20, "Banglore"</li>
+	<li><b>Explanation </b> : cloneUserDetails is created by using the spread syntax ({ ...userDetails }). This syntax creates a shallow copy of the userDetails object, 		meaning that the top-level properties are copied, but nested objects are still referenced.</li>
+	<li><b>case 1</b> : Although userDetails.age was changed to 22, cloneUserDetails still holds the original value of 20. This is because the spread syntax only creates a shallow 		copy, so the age property of cloneUserDetails remains unchanged.</li>
+	<li><b>case 2</b> : The nested address object is still referenced by cloneUserDetails, so when the city property of userDetails.address is changed, it reflects in 				cloneUserDetails.address as well. Therefore, the output is "Banglore".</li>
+	</ul>
+	
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
