@@ -491,3 +491,45 @@ console.log(cloneUserDetails.address.city);
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**29. What will be the output**
+```js
+function hello(){
+console.log(name);
+console.log(age);
+var name = "Alice";
+let age = 21;
+}
+hello();
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : undefined, ReferenceError: can't access lexical declaration 'age' before initialization"</li>
+	<li><b>Reason for console.log(name)</b> : The variable name (declared with var) is hoisted to the top, so JavaScript knows it exists, but it hasn't been assigned a value yet, so it prints undefined</li>
+	<li><b>Reason for console.log(age)</b> : The variable age (declared with let) is also hoisted to the top of its scope, but unlike var, it is not initialized until the line where it is declared.</b></li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+
+**30. What will be the output**
+```js
+const arr1 = [1,2,3];
+const arr2 = [1,2,3];
+const str = "1,2,3";
+
+console.log(arr1 == str);
+console.log(arr1 == arr2);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : true, false</li>
+	<li><b>Reason for console.log(arr1 == str)</b> : Javascript compiler performs type conversion. In this case, it converts the array arr1 and the string str to their string representations and then compares them.</li>
+	<li><b>Reason for console.log(age)</b> : In Javascript arrays are objects and objects are compared by reference. In this case, arr1 and arr2 are pointing to 2 different memory locations</b></li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
