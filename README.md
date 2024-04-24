@@ -533,3 +533,21 @@ console.log(arr1 == arr2);
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**31. What will be the output**
+```js
+const a = {x : 1};
+const b = {x : 1};
+console.log(a === b);
+console.log(a.x === b.x)
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : false, true</li>
+	<li><b>Reason for console.log(a === b)</b> : This compares whether a and b refer to the exact same object in memory. They are two different objects in memory, so the comparison evaluates to false</li>
+	<li><b>Reason for console.log(a.x === b.x)</b> : This compares the x property of objects a and b. Since both a.x and b.x have the same value i.e., 1, so the comparison evaluates to true.</b></li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
