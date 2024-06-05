@@ -551,3 +551,35 @@ console.log(a.x === b.x)
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**32. What will be the output**
+```js
+const arr = [10, -1, 2];
+arr.sort((a, b) => a - b);
+console.log(arr);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : [-1, 2, 10]</li>
+	<li><b>Reason</b> : The compare function (a, b) => a - b sorts the numbers numerically in ascending order.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**33. What will be the output**
+```js
+const arr = [11, 0, '', false, 2, 1];
+const filtered = arr.filter(Boolean);
+console.log(filtered);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : [11, 2, 1]</li>
+	<li><b>Reason</b> : filter(Boolean) removes all falsy values (0, "" (empty string), false, null, undefined, and NaN) from the array and keeps truthy ones.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
