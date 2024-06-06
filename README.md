@@ -583,3 +583,64 @@ console.log(filtered);
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**34. What will be the output**
+```js
+var x = 0;
+var y = 10;
+if(x){
+  console.log(x);
+}
+if(y){
+  console.log(y);
+}
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 10</li>
+	<li><b>Reason</b> : x = 0 is falsy and doesn't trigger the console.log(x), while y = 10 is truthy and triggers the console.log(y).</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**35. What will be the output**
+```js
+const obj = {
+var1: 1,
+var2: 2
+};
+const { var1, var2 } = obj;
+console.log(var1, var2);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 1, 2</li>
+	<li><b>Reason</b> : Object destructuring extracts the values of var1 and var2 from obj object and prints them using console.log(var1, var2)</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**36. What will be the output**
+```js
+const user = { 
+name: "Surbhi dighe", 
+country: "India" 
+};
+const { name: fullname, country } = user;
+console.log(fullname);
+console.log(name);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : Surbhi Dighe, ReferenceError: name is not defined</li>
+	<li><b>Reason for console.log(fullname)</b> : The name property from user is assigned to a local variable fullname.</li>
+	<li><b>Reason for console.log(name)</b> : It gives an error because name was assigned to a local variable fullname and therefore name is not directly accessible.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
