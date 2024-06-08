@@ -644,3 +644,40 @@ console.log(name);
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**37. What will be the output**
+```js
+const person = {
+  firstName: 'Surbhi',
+};
+const { lastName="dighe" } = person;
+console.log(lastName);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : dighe</li>
+	<li><b>Reason</b> : The lastName property is not defined in the person object and the destructuring syntax provides a default value ("dighe") to be used when the property is missing.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**38. What will be the output**
+```js
+const person = {
+  firstName: 'Surbhi',
+};
+const { firstName="Henry"} = person;
+console.log(firstName);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : Surbhi</li>
+	<li><b>Reason</b> : The `firstName` property in the `person` object has the value 'Surbhi'. The default value "Henry" is ignored because it only applies when the property does not exist or is `undefined`</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
