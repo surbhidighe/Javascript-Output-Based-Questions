@@ -681,3 +681,34 @@ console.log(firstName);
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**39. What will be the output**
+```js
+var a = 10;
+let a = 20;
+console.log(a)
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : SyntaxError: Identifier 'a' has already been declared</li>
+	<li><b>Reason</b> : In Javascript, we cannot redeclare a variable with let if it has already been declared in the same scope. </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**40. What will be the output**
+```js
+const arr = ["A","B","C","D","E"]
+console.log(Object.keys(arr)); 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : [ '0', '1', '2', '3', '4' ]</li>
+	<li><b>Reason</b> : In JavaScript, arrays are a special type of object. Object.keys() on an array returns an array of strings representing the indices of the array elements. </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
