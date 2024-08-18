@@ -528,7 +528,7 @@ console.log(arr1 == arr2);
 <ul>	
 	<li><b>Output</b> : true, false</li>
 	<li><b>Reason for console.log(arr1 == str)</b> : Javascript compiler performs type conversion. In this case, it converts the array arr1 and the string str to their string representations and then compares them.</li>
-	<li><b>Reason for console.log(arr1==arr2)</b> : In Javascript arrays are objects and objects are compared by reference. In this case, arr1 and arr2 are pointing to 2 different memory locations</b></li>
+	<li><b>Reason for console.log(arr1==arr2) </b> : In Javascript arrays are objects and objects are compared by reference. In this case, arr1 and arr2 are pointing to 2 different memory locations</b></li>
 </ul>
 </details>
 
