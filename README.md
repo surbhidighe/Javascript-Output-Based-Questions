@@ -4,7 +4,7 @@
 #### Click :star: if you like it!!
 Every contribution counts, regardless of its size. I value and appreciate the efforts of all contributors, from beginners to seasoned developers. Join me on this exciting journey of open-source collaboration. **Together, let's build something amazing!** :handshake:
 
---- 
+---
 
 #### Contribution Guidelines
 
@@ -275,7 +275,7 @@ console.log({} === {});
 	<li><b>Reason</b> : When you compare objects using == or ===, it checks if they refer to the exact same object. So even if they are looking same, they are pointing to different memory locations.</li>
 </ul>
 </details>
-	
+
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **17. What will be the output**
@@ -486,7 +486,7 @@ console.log(cloneUserDetails.address.city);
 	<li><b>case 1</b> : Although userDetails.age was changed to 22, cloneUserDetails still holds the original value of 20. This is because the spread syntax only creates a shallow copy, so the age property of cloneUserDetails remains unchanged.</li>
 	<li><b>case 2</b> : The nested address object is still referenced by cloneUserDetails, so when the city property of userDetails.address is changed, it reflects in cloneUserDetails.address as well. Therefore, the output is "Banglore".</li>
 	</ul>
-	
+
 </ul>
 </details>
 
@@ -528,7 +528,7 @@ console.log(arr1 == arr2);
 <ul>	
 	<li><b>Output</b> : true, false</li>
 	<li><b>Reason for console.log(arr1 == str)</b> : Javascript compiler performs type conversion. In this case, it converts the array arr1 and the string str to their string representations and then compares them.</li>
-	<li><b>Reason for console.log(age)</b> : In Javascript arrays are objects and objects are compared by reference. In this case, arr1 and arr2 are pointing to 2 different memory locations</b></li>
+	<li><b>Reason for console.log(arr1==arr2) </b> : In Javascript arrays are objects and objects are compared by reference. In this case, arr1 and arr2 are pointing to 2 different memory locations</b></li>
 </ul>
 </details>
 
