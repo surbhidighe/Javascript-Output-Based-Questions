@@ -635,12 +635,12 @@ console.log(fullname);
 console.log(name);
 ```
 <details>
-	<summary><b>View Answer</b></summary>
-<ul>	
-	<li><b>Output</b> : Surbhi Dighe, ReferenceError: name is not defined</li>
-	<li><b>Reason for console.log(fullname)</b> : The name property from user is assigned to a local variable fullname.</li>
-	<li><b>Reason for console.log(name)</b> : It gives an error because name was assigned to a local variable fullname and therefore name is not directly accessible.</li>
-</ul>
+    <summary><b>View Answer</b></summary>
+    <ul>    
+        <li><b>Output</b>: Surbhi Dighe, ReferenceError: name is not defined</li>
+        <li><b>Reason for console.log(fullname)</b>: The `fullname` variable is assigned the value from `user.name`. This value is correctly output as "Surbhi Dighe" because `fullname` is defined and holds the value "Surbhi Dighe".</li>
+        <li><b>Reason for console.log(name)</b>: In JavaScript, if a variable is not found in the current scope, JavaScript looks up the scope chain. If it reaches the global scope and still doesn’t find the variable, it will throw a `ReferenceError`. In browsers like Chrome, `name` is not a global variable; instead, it might refer to `window.name`, which is a property on the `window` object that holds the name of the window (default is an empty string). Since `name` is not defined locally or globally in this case, a `ReferenceError` is thrown. In Node.js, there is no global `name` property, so attempting to access it would also result in a `ReferenceError`.</li>
+    </ul>
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
