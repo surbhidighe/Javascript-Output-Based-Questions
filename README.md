@@ -639,7 +639,7 @@ console.log(name);
 <ul>	
 	<li><b>Output</b> : Surbhi Dighe, ReferenceError: name is not defined</li>
 	<li><b>Reason for console.log(fullname)</b> : The name property from user is assigned to a local variable fullname.</li>
-	<li><b>Reason for console.log(name)</b> : It gives an error because name was assigned to a local variable fullname and therefore name is not directly accessible.</li>
+	<li><b>Reason for console.log(name)</b> :Whenever JavaScript is unable to find a variable within the current scope , it climbs up the scope chain and searches for it and if it reaches the top-level scopw aka Global scope and still doesnt find it it will throw RefereneError. In browsers such as chrome , name is a deprectaed global scope property .In this example , the code is running inside global scope and there is no user-defined variable for 'name' therefore it searches the predifined variables/properties in the global scope which is in the case of browsers , it searches window object and it will extract the window.name value which is equal to an empty string.In NodeJS , there is no such property on the 'global' object , thus attempting to access a non-existant varible will raise a ReferenceError</li>
 </ul>
 </details>
 
