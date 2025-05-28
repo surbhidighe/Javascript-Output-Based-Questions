@@ -762,42 +762,6 @@ console.log(a.y.alpha);
 
 **43. What will be the output**
 ```js
-greet();
-function greet() {
-  console.log("Hello");
-}
-```
-<details>
-    <summary><b>View Answer</b></summary>
-<ul>    
-    <li><b>Output</b> : The console will output `"Hello"`.</li>
-    <li><b>Reason</b> : Function declarations are hoisted, meaning the `greet` function is fully available before it's called. So when `greet();` is executed, it successfully prints `"Hello"` to the console.</li>
-</ul>
-</details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
-
-
-**44. What will be the output**
-```js
-greet();
-var greet = function() {
-  console.log("Hi");
-}
-```
-<details>
-    <summary><b>View Answer</b></summary>
-<ul>    
-    <li><b>Output</b> : The code will throw a TypeError.</li>
-    <li><b>Reason</b> : While `var greet` is hoisted, it is initialized with undefined at the time of execution. Therefore, calling greet(); before the assignment results in an error becuase undefined is not a function.</li>
-</ul>
-</details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
-**45. What will be the output**
-```js
 console.log('Start');
 
 setTimeout(() => {
@@ -811,7 +775,7 @@ Promise.resolve().then(() => {
 console.log('End');
 ```
 
-**45. What will be the output**
+**44. What will be the output**
 ```js
 console.log('Start');
 
