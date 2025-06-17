@@ -712,3 +712,97 @@ console.log(Object.keys(arr));
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**41. What will be the output**
+```js
+function modify(obj) {
+    obj.name = "Updated";
+}
+
+let person = { name: "Original" };
+modify(person);
+console.log(person.name);
+
+function reassign(obj) {
+    obj = { name: "New Object" };
+}
+
+reassign(person);
+console.log(person.name); 
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : Output of the first console log will be "Updated". Output of the second console log will also be "Updated".</li>
+	<li><b>Reason</b> : JS does not allow true pass by reference. It uses call by value for primitives (numbers, strings, booleans, null, undefined and symbols) and call by sharing for objects and arrays. <br> If you modify an object's properties inside a function, the changes will reflect outside the function but if you reassign the object completely inside the function, the original reference will remain unchanged outside.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+
+**42. What will be the output**
+```js
+let a={ x:1, y: {alpha:10,beta:20} };
+let b = {...a};
+b.x=101;
+b.y.alpha=1001;
+console.log(a.x);
+console.log(a.y.alpha);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : First console log will output "1". Second console log will output "1001".</li>
+	<li><b>Reason</b> : The spread operator provides a shallow copy operation and any objects that are deeply nested in the variable a will still be shared between a as well as b. To make an actual deep copy, use the method structuredClone(a) </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+
+**43. What will be the output**
+```js
+console.log('Start');
+
+setTimeout(() => {
+  console.log('setTimeout');
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log('Promise');
+});
+
+console.log('End');
+```
+
+**44. What will be the output**
+```js
+console.log('Start');
+
+setTimeout(() => {
+  console.log('setTimeout');
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log('Promise');
+});
+
+console.log('End');
+```
+<details>
+    <summary><b>View Answer</b></summary>
+<ul>    
+    <li><b>Output</b> : The console will output the following order:
+        <ul>
+            <li>Start</li>
+            <li>End</li>
+            <li>Promise</li>
+            <li>setTimeout</li>
+        </ul>
+    </li>
+    <li><b>Reason</b> : The execution order is Synchronous code first, then Microtasks run and the Microtask queue is emptied, then the Macrotasks run in the Task queue/ Callback queue. All the callbacks in the .then(), .catch() and .finally() get into the microtask queue and the other asynchronous operations, go into the WebAPIs first and when they are completed, the callbacks in them go to task queue.
+    </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
