@@ -774,21 +774,6 @@ Promise.resolve().then(() => {
 
 console.log('End');
 ```
-
-**44. What will be the output**
-```js
-console.log('Start');
-
-setTimeout(() => {
-  console.log('setTimeout');
-}, 0);
-
-Promise.resolve().then(() => {
-  console.log('Promise');
-});
-
-console.log('End');
-```
 <details>
     <summary><b>View Answer</b></summary>
 <ul>    
