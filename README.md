@@ -791,3 +791,40 @@ console.log('End');
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**44. What will be the output**
+```js
+var array = [1,2,3,4,5];
+delete array[2];
+console.log(array.length);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 5</li>
+	<li><b>Reason</b> : "delete" removes the element but does not reindex the array or change its length. It leaves undefined holes in the array</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**45. What will be the output**
+```js
+let x = ["a","b","c"];
+let y = ["a","b","c"];
+let z = y;
+console.log(x == y);
+console.log(z == y);
+console.log(z == x);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : false, true, false (In JS arrays are objects, and objects are compared by reference, not by value)</li>
+	<li><b>Reason for console.log(x == y)</b> : x and y are two different arrays stored at different memory locations</li>
+	<li><b>Reason for console.log(z == y)</b> : z is assigned to y, so both refer to the same memory location</li>
+	<li><b>Reason for console.log(z == x)</b> : z and x are two different arrays stored at different memory locations</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
