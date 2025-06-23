@@ -828,3 +828,51 @@ console.log(z == x);
 </details>
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**46. What will be the output**
+```js
+let x; 
+console.log(x);
+x = 20;
+console.log(x);
+x = "John";
+console.log(x);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : undefined, 20, John</li>
+	<li><b>Reason for first console.log(x)</b> : Since x is declared but not assigned any value yet, so this logs undefined</li>
+	<li><b>Reason for second console.log(x)</b> : Now x has been assigned a value 20, so this logs 20</li>
+	<li><b>Reason for third console.log(x)</b> : Now the value of x has been changed to "John", so this logs John</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**47. What will be the output**
+```js
+let text;
+switch (1) {
+  case 0:
+    text = "This is zero";
+    break;
+  case 1:
+    text = "This is one";
+  case 2:
+    text = "This is two";
+    break;
+  default:
+    text = "No matches found!";
+}
+console.log(text);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : This is two</li>
+	<li><b>Reason</b> : switch(1) means JS looks for a case that matches 1. It finds case 1 & sets text as "This is one". But there is no break, so it keeps going (falls through) into case 2 & overwrites the value.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
