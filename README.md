@@ -877,6 +877,7 @@ console.log(text);
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**48. What will be the output**
 ```js
 const user = {
     name: 'Aman Bhoria!',
@@ -889,7 +890,7 @@ setTimeout(user.logMessage, 1000);
 <details>
 	<summary><b>View Answer</b></summary>
 <ul>	
-	<li><b>Output</b> : This is undefined</li>
+	<li><b>Output</b> : undefined</li>
 	<li><b>Reason</b> : We've passed the reference in setTimeout not the actual function so as a result it doesn't have the user's context while executing. To get the name we've to pass a callback like: 
 		setTimeout(() => user.logMessage(), 1000); </li>
 </ul>
