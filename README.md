@@ -717,7 +717,6 @@ console.log(Object.keys(arr));
 function modify(obj) {
     obj.name = "Updated";
 }
-
 let person = { name: "Original" };
 modify(person);
 console.log(person.name);
@@ -725,7 +724,6 @@ console.log(person.name);
 function reassign(obj) {
     obj = { name: "New Object" };
 }
-
 reassign(person);
 console.log(person.name); 
 ```
@@ -763,30 +761,19 @@ console.log(a.y.alpha);
 **43. What will be the output**
 ```js
 console.log('Start');
-
 setTimeout(() => {
   console.log('setTimeout');
 }, 0);
-
 Promise.resolve().then(() => {
   console.log('Promise');
 });
-
 console.log('End');
 ```
 <details>
     <summary><b>View Answer</b></summary>
 <ul>    
-    <li><b>Output</b> : The console will output the following order:
-        <ul>
-            <li>Start</li>
-            <li>End</li>
-            <li>Promise</li>
-            <li>setTimeout</li>
-        </ul>
-    </li>
-    <li><b>Reason</b> : The execution order is Synchronous code first, then Microtasks run and the Microtask queue is emptied, then the Macrotasks run in the Task queue/ Callback queue. All the callbacks in the .then(), .catch() and .finally() get into the microtask queue and the other asynchronous operations, go into the WebAPIs first and when they are completed, the callbacks in them go to task queue.
-    </li>
+    <li><b>Output</b> : The console will output in this order -> Start, End, Promise, setTimeout</li>
+    <li><b>Reason</b> : The execution order is Synchronous code first, then Microtasks run and the Microtask queue is emptied, then the Macrotasks run in the Task queue/ Callback queue. All the callbacks in the .then(), .catch() and .finally() get into the microtask queue and the other asynchronous operations, go into the WebAPIs first and when they are completed, the callbacks in them go to task queue.</li>
 </ul>
 </details>
 
@@ -891,8 +878,24 @@ setTimeout(user.logMessage, 1000);
 	<summary><b>View Answer</b></summary>
 <ul>	
 	<li><b>Output</b> : undefined</li>
-	<li><b>Reason</b> : We've passed the reference in setTimeout not the actual function so as a result it doesn't have the user's context while executing. To get the name we've to pass a callback like: 
-		setTimeout(() => user.logMessage(), 1000); </li>
+	<li><b>Reason</b> : We've passed the reference in setTimeout not the actual function so as a result it doesn't have the user's context while executing. To get the name we've to pass a callback like: setTimeout(() => user.logMessage(), 1000); </li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**49. What will be the output**
+```js
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const finalObj = Object.assign({}, obj1, obj2);
+console.log(finalObj);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : { a: 1, b: 3, c: 4 }</li>
+	<li><b>Reason</b> : When two or more objects are merged: If keys conflict (i.e., the same key exists in multiple objects), the value from the later object overwrites the earlier one.</li>
 </ul>
 </details>
 
