@@ -742,8 +742,10 @@ console.log(person.name);
 ```js
 let a={ x:1, y: {alpha:10,beta:20} };
 let b = {...a};
+
 b.x=101;
 b.y.alpha=1001;
+
 console.log(a.x);
 console.log(a.y.alpha);
 ```
@@ -761,12 +763,15 @@ console.log(a.y.alpha);
 **43. What will be the output**
 ```js
 console.log('Start');
+
 setTimeout(() => {
   console.log('setTimeout');
 }, 0);
+
 Promise.resolve().then(() => {
   console.log('Promise');
 });
+
 console.log('End');
 ```
 <details>
@@ -800,6 +805,7 @@ console.log(array.length);
 let x = ["a","b","c"];
 let y = ["a","b","c"];
 let z = y;
+
 console.log(x == y);
 console.log(z == y);
 console.log(z == x);
@@ -888,6 +894,7 @@ setTimeout(user.logMessage, 1000);
 ```js
 const obj1 = { a: 1, b: 2 };
 const obj2 = { b: 3, c: 4 };
+
 const finalObj = Object.assign({}, obj1, obj2);
 console.log(finalObj);
 ```
@@ -896,6 +903,26 @@ console.log(finalObj);
 <ul>	
 	<li><b>Output</b> : { a: 1, b: 3, c: 4 }</li>
 	<li><b>Reason</b> : When two or more objects are merged: If keys conflict (i.e., the same key exists in multiple objects), the value from the later object overwrites the earlier one.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+**50. What will be the output**
+```js
+let a = {};
+let b = { key: "abc" };
+let c = { key: "efg" };
+
+a[b] = 111;
+a[c] = 222;
+console.log(a[b]);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 222</li>
+	<li><b>Reason</b> :In JavaScript, using an object as a key in a normal object turns it into a string. That string is usually "[object Object]". So, two different objects like b and c become the same key -> a[b] = 111 & a[c] = 222 becomes a["[object Object]"] = 111 & a["[object Object]"] = 222. Hence, the second value (222) replaces the first one. </li>
 </ul>
 </details>
 
