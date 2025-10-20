@@ -928,3 +928,24 @@ console.log(a[b]);
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**51. What will be the output of this code?**
+```js
+function printName(firstName, lastName) {
+    firstName = "Aman";
+    lastName = "Bhoria";
+    return arguments[0] + " " + arguments[1];
+}
+
+let name = printName("John", "Doe");
+console.log(name)
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : Aman Bhoria</li>
+	<li><b>Reason</b> :In non-strict mode, the arguments object (an array-like object) holds the values passed to the function. When you change the function parameters, the corresponding values in the arguments object are updated as well. In strict mode, this link is removed. As a result, function prints the original values that were passed.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
