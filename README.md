@@ -949,3 +949,31 @@ console.log(name)
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**52. Output when using objects as keys in another object ?**
+```
+const a = {};
+const b = { key: "b" };
+const c = { key: "c" };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 456</li>
+	<li><b>Reason</b> :
+		When objects are used as keys in a regular JavaScript object, they are automatically converted to strings. 
+		Both <code>b</code> and <code>c</code> become the same key:
+		<br><code>a["[object Object]"] = 123</code>
+		<br><code>a["[object Object]"] = 456</code>
+		The second assignment overwrites the first, so the final value printed is <b>456</b>.
+	</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
+
