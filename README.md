@@ -949,3 +949,20 @@ console.log(name)
 
 **[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
+**52. What will be the output of this code?**
+```js
+let x = true + false; 
+let y = x + 1;
+
+console.log(x, y);
+```
+<details>
+	<summary><b>View Answer</b></summary>
+<ul>	
+	<li><b>Output</b> : 1, 2</li>
+	<li><b>Reason</b> : When + operator is used with boolean values, JavaScript performs implicit type coercion: true is converted to 1 and false is converted to 0.</li>
+</ul>
+</details>
+
+**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
+
