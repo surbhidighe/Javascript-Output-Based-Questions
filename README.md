@@ -495,10 +495,10 @@ console.log(cloneUserDetails.address.city);
 **29. What will be the output**
 ```js
 function hello(){
-console.log(name);
-console.log(age);
-var name = "Alice";
-let age = 21;
+	console.log(name);
+	console.log(age);
+	var name = "Alice";
+	let age = 21;
 }
 hello();
 ```
@@ -608,8 +608,8 @@ if(y){
 **35. What will be the output**
 ```js
 const obj = {
-var1: 1,
-var2: 2
+	var1: 1,
+	var2: 2
 };
 const { var1, var2 } = obj;
 console.log(var1, var2);
@@ -627,8 +627,8 @@ console.log(var1, var2);
 **36. What will be the output**
 ```js
 const user = { 
-name: "Surbhi dighe", 
-country: "India" 
+	name: "Surbhi dighe", 
+	country: "India" 
 };
 const { name: fullname, country } = user;
 console.log(fullname);
